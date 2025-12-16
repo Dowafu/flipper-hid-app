@@ -12,6 +12,10 @@ Keynote - Remote for presentations
 
 Keynote Vertical - Alternate remote for presentations
 
+![Presenter](screenshots/Presenter_with_flipper.jpg)
+
+Presenter - Adds a laser module to the Keynote Vertical
+
 ![screenshots/keyboard.png](Keyboard)
 
 Keyboard - A functional keyboard, including modifier keys
