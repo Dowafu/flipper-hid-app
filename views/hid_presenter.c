@@ -42,20 +42,20 @@ static void hid_presenter_draw_vertical_callback(Canvas* canvas, void* context) 
     // Header
 #ifdef HID_TRANSPORT_BLE
     if(model->connected) {
-        canvas_draw_icon(canvas, 0, 0, &I_Ble_connected_15x15);
+        canvas_draw_icon(canvas, 2, 25, &I_Ble_connected_15x15);
     } else {
-        canvas_draw_icon(canvas, 0, 0, &I_Ble_disconnected_15x15);
+        canvas_draw_icon(canvas, 2, 25, &I_Ble_disconnected_15x15);
     }
     canvas_set_font(canvas, FontPrimary);
-    elements_multiline_text_aligned(canvas, 20, 3, AlignLeft, AlignTop, "Present");
+    elements_multiline_text_aligned(canvas, 10, 0, AlignLeft, AlignTop, "Presenter");
 #else
     canvas_set_font(canvas, FontPrimary);
-    elements_multiline_text_aligned(canvas, 12, 3, AlignLeft, AlignTop, "Present");
+    elements_multiline_text_aligned(canvas, 10, 0, AlignLeft, AlignTop, "Presenter");
 #endif
 
-    canvas_draw_icon(canvas, 2, 18, &I_Pin_back_arrow_10x8);
+    canvas_draw_icon(canvas, 0, 11, &I_Pin_back_arrow_10x8);
     canvas_set_font(canvas, FontSecondary);
-    elements_multiline_text_aligned(canvas, 15, 19, AlignLeft, AlignTop, "Hold to exit");
+    elements_multiline_text_aligned(canvas, 12, 13, AlignLeft, AlignTop, "Hold to exit");
 
     const uint8_t x_2 = 23;
     const uint8_t x_1 = 2;
@@ -107,7 +107,7 @@ static void hid_presenter_draw_vertical_callback(Canvas* canvas, void* context) 
         canvas_set_color(canvas, ColorWhite);
     }
     canvas_draw_icon(canvas, 11, 90, &I_Ok_btn_9x9);
-    canvas_draw_icon(canvas, 20, 88, &I_laser);
+    canvas_draw_icon(canvas, 22, 89, &I_laser_32x11);
     // elements_multiline_text_aligned(canvas, 26, 98, AlignLeft, AlignBottom, "Laser");
     canvas_set_color(canvas, ColorBlack);
 
@@ -223,9 +223,9 @@ void hid_presenter_set_connected_status(HidPresenter* hid_presenter, bool connec
         hid_presenter->view, HidPresenterModel * model, { model->connected = connected; }, true);
 }
 
-void hid_presenter_set_orientation(HidPresenter* hid_presenter, bool vertical) {
+void hid_presenter_set_orientation(HidPresenter* hid_presenter) {
     furi_assert(hid_presenter);
-    // vertical
+    // always vertical
     view_set_draw_callback(hid_presenter->view, hid_presenter_draw_vertical_callback);
     view_set_orientation(hid_presenter->view, ViewOrientationVerticalFlip);
 }

@@ -118,7 +118,7 @@ bool hid_scene_start_on_event(void* context, SceneManagerEvent event) {
                 break;
             case HidSubmenuIndexPresenter:
                 view_id = HidViewPresenter;
-                hid_presenter_set_orientation(app->hid_presenter, true);
+                hid_presenter_set_orientation(app->hid_presenter);
                 break;
             case HidSubmenuIndexKeyboard:
                 view_id = HidViewKeyboard;

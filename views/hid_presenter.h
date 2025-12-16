@@ -13,4 +13,4 @@ View* hid_presenter_get_view(HidPresenter* hid_presenter);
 
 void hid_presenter_set_connected_status(HidPresenter* hid_presenter, bool connected);
 
-void hid_presenter_set_orientation(HidPresenter* hid_presenter, bool vertical);
+void hid_presenter_set_orientation(HidPresenter* hid_presenter);
