@@ -3,6 +3,9 @@
 > [!warning]
 > Lasers can be dangerous! Act responsibly and follow your local laws and regulations.
 
+Laser module
+![lasermodule|200x100](./laser_module.jpg){width=50%}
+
 ## BOM
 
 * Laser Module Ø10x26 mm (e.g. [laserfuchs](https://www.laserfuchs.de/en/index.php/detail/4d64d8b891444d76b7d398439a530973))
@@ -11,7 +14,7 @@
 
 ## Assembly
 
-1. 3D print [Presenter.Laser.stl](Presenter.Laser.stl)
+1. 3D print [Presenter.Laser.stl](./Presenter.Laser.stl)
    1. Fused Filament Fabrication with a 1.2 mm layer height and support on the print plate works well.
 2. Slot the laser into the 3D printed part
 3. Shorten the wires
