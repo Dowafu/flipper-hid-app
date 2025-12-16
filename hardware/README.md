@@ -4,7 +4,8 @@
 > Lasers can be dangerous! Act responsibly and follow your local laws and regulations.
 
 Laser module
-![lasermodule|200x100](./laser_module.jpg){width=50%}
+
+<img src="./laser_module.jpg" width="300">   
 
 ## BOM
 
