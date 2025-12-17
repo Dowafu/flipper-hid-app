@@ -4,58 +4,82 @@ This is a standalone version of the HID app Momentum. Thankfully, that project i
 
 ## Functionality
 
-![screenshots/keynote.png](Keynote)
+### Keynote
+
+![Keynote](screenshots/keynote.png)
 
 Keynote - Remote for presentations
 
-![screenshots/keynote-vertical.png](Keynote Vertical)
+![Keynote Vertical](screenshots/keynote-vertical.png)
 
 Keynote Vertical - Alternate remote for presentations
+
+### Presenter
 
 ![Presenter](screenshots/Presenter_with_flipper.jpg)
 
 Presenter - Adds a laser module to the Keynote Vertical
 
-![screenshots/keyboard.png](Keyboard)
+### Keyboard
+
+![Keyboard](screenshots/keyboard.png)
 
 Keyboard - A functional keyboard, including modifier keys
 
-![screenshots/numpad.png](Numpad)
+### Numpad
+
+![Numpad](screenshots/numpad.png)
 
 Numpad - Number pad
 
-![screenshots/media.png](Media)
+### Media
+
+![Media](screenshots/media.png)
 
 Media - Media controls
 
-![screenshots/apple-music-macos.png](Apple Music macOS)
+### Apple Music macOS
+
+![Apple Music macOS](screenshots/apple-music-macos.png)
 
 Apple Music macOS - Alternate music controls
 
-![screenshots/movie.png](Movie)
+### Movie
+
+![Movie](screenshots/movie.png)
 
 Movie - Media controls for watching a movie
 
-![screenshots/mouse.png](Mouse)
+### Mouse
+
+![Mouse](screenshots/mouse.png)
 
 Mouse - Move the cursor and send clicks
 
-![screenshots/tiktoc-yt-shorts.png](TikToc YT Shorts)
+### TikToc / YT Shorts
+
+![TikToc YT Shorts](screenshots/tiktoc-yt-shorts.png)
 
 TikToc / YT Shorts - Specialized controls for short-form videos
 
-![screenshots/mouse-clicker.png](Mouse Clicker)
+### Mouse Clicker
+
+![Mouse Clicker](screenshots/mouse-clicker.png)
 
 Mouse Clicker - Repeatedly click the mouse after a delay
 
-![screenshots/mouse-jiggler.png](Mouse Jiggler)
+### Mouse Jiggler
+
+![Mouse Jiggler](screenshots/mouse-jiggler.png)
 
 Mouse Jiggler - Moves the mouse every few seconds
 
-![screenshots/mouse-jiggler-stealth.png](Mouse Jiggler Stealth)
+![Mouse Jiggler Stealth](screenshots/mouse-jiggler-stealth.png)
 
 Mouse Jiggler Stealth - Moves the mouse a random direction and distance after a random time period
 
-![PushToTalk](PushToTalk)
+### Push To Talk
+
+![PushToTalk](screenshots/push-to-talk-1.png) ![PushToTalk](screenshots/push-to-talk-2.png)
 
 PushToTalk - Controls to unmute your microphone with various services
