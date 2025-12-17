@@ -4,6 +4,7 @@
 enum HidSubmenuIndex {
     HidSubmenuIndexKeynote,
     HidSubmenuIndexKeynoteVertical,
+    HidSubmenuIndexPresenter,
     HidSubmenuIndexKeyboard,
     HidSubmenuIndexNumpad,
     HidSubmenuIndexMedia,
@@ -34,6 +35,8 @@ void hid_scene_start_on_enter(void* context) {
         HidSubmenuIndexKeynoteVertical,
         hid_scene_start_submenu_callback,
         app);
+    submenu_add_item(
+        app->submenu, "Presenter", HidSubmenuIndexPresenter, hid_scene_start_submenu_callback, app);
     submenu_add_item(
         app->submenu, "Keyboard", HidSubmenuIndexKeyboard, hid_scene_start_submenu_callback, app);
     submenu_add_item(
@@ -112,6 +115,10 @@ bool hid_scene_start_on_event(void* context, SceneManagerEvent event) {
             case HidSubmenuIndexKeynoteVertical:
                 view_id = HidViewKeynote;
                 hid_keynote_set_orientation(app->hid_keynote, true);
+                break;
+            case HidSubmenuIndexPresenter:
+                view_id = HidViewPresenter;
+                hid_presenter_set_orientation(app->hid_presenter);
                 break;
             case HidSubmenuIndexKeyboard:
                 view_id = HidViewKeyboard;

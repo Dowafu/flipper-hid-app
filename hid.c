@@ -40,6 +40,7 @@ static void bt_hid_connection_status_changed_callback(BtStatus status, void* con
     notification_internal_message(
         hid->notifications, connected ? &sequence_set_blue_255 : &sequence_reset_blue);
     hid_keynote_set_connected_status(hid->hid_keynote, connected);
+    hid_presenter_set_connected_status(hid->hid_presenter, connected);
     hid_keyboard_set_connected_status(hid->hid_keyboard, connected);
     hid_numpad_set_connected_status(hid->hid_numpad, connected);
     hid_media_set_connected_status(hid->hid_media, connected);
@@ -97,6 +98,11 @@ Hid* hid_alloc() {
     app->hid_keynote = hid_keynote_alloc(app);
     view_dispatcher_add_view(
         app->view_dispatcher, HidViewKeynote, hid_keynote_get_view(app->hid_keynote));
+
+    // Presenter
+    app->hid_presenter = hid_presenter_alloc(app);
+    view_dispatcher_add_view(
+        app->view_dispatcher, HidViewPresenter, hid_presenter_get_view(app->hid_presenter));
 
     // Keyboard view
     app->hid_keyboard = hid_keyboard_alloc(app);
@@ -181,6 +187,8 @@ void hid_free(Hid* app) {
     popup_free(app->popup);
     view_dispatcher_remove_view(app->view_dispatcher, HidViewKeynote);
     hid_keynote_free(app->hid_keynote);
+    view_dispatcher_remove_view(app->view_dispatcher, HidViewPresenter);
+    hid_presenter_free(app->hid_presenter);
     view_dispatcher_remove_view(app->view_dispatcher, HidViewKeyboard);
     hid_keyboard_free(app->hid_keyboard);
     view_dispatcher_remove_view(app->view_dispatcher, HidViewNumpad);
